@@ -28,4 +28,14 @@ class Services extends BaseService
 	//
 	//     return new \CodeIgniter\Example();
 	// }
+
+	/**
+	 * Get secret key of JWT.
+	 * 
+	 * @return string $jwt_secret_key.
+	 */
+	public static function getSecretKey(): string
+	{
+		return getenv('JWT_SECRET_KEY');
+	}
 }
